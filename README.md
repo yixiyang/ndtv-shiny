@@ -11,3 +11,5 @@ Create the repository
 6/18 Michael checking that Rstudio-git integration works, hello world!
 
 6/25 Tongfang
+
+7/2 Yixi

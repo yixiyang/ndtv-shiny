@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Language" content="en">
     
     
-    <title>ndtv-shiny/README.md at master · Statnet-Summer-Project/ndtv-shiny</title>
+    <title>ndtv-shiny/RdtoShinyInput.R at master · Statnet-Summer-Project/ndtv-shiny</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
@@ -31,7 +31,7 @@
     <meta name="selected-link" value="repo_source" data-pjax-transient>
       <meta name="google-analytics" content="UA-3769691-2">
 
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="DDC9191A:6A40:8F558F2:53EFBC0D" name="octolytics-dimension-request_id" /><meta content="7905851" name="octolytics-actor-id" /><meta content="yixiyang" name="octolytics-actor-login" /><meta content="2f2f24424a4c3cbf2da856a61a4b59db21ad512589660290579d32e182548afd" name="octolytics-actor-hash" />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="DDC9191A:6A40:8F555B9:53EFBC08" name="octolytics-dimension-request_id" /><meta content="7905851" name="octolytics-actor-id" /><meta content="yixiyang" name="octolytics-actor-login" /><meta content="2f2f24424a4c3cbf2da856a61a4b59db21ad512589660290579d32e182548afd" name="octolytics-actor-hash" />
     
 
     
@@ -40,7 +40,7 @@
 
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="wim4a+FqfRMcCozTYucrSM4GlXPsqL/pHEitHglSANIhCeo2vbAO1NEU/FXAq8Esnb0X/bCWAay0gwMEX4eg6A==" name="csrf-token" />
+<meta content="1tFQ8Xm3TBsr/jhWi8INWTHmApzXzOS7gnTuTkgH/lSX+mbdXtO3zV5+EtDGH580eLeWprkOCrubWjFXZF1o3Q==" name="csrf-token" />
 
     <link href="https://assets-cdn.github.com/assets/github-5efa7b0b8a55ddcee56e5aee3fa56109d1d2781c.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://assets-cdn.github.com/assets/github2-97fd69f3a3771e25d14b434fa06478cc54fb9bf3.css" media="all" rel="stylesheet" type="text/css" />
@@ -161,7 +161,7 @@
     </a>
   </li>
   <li>
-    <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="2STMIpHxpN3oYhvQnBO+0HYmnJ0/lKQ9H+2WiR/X+bnUyMgY7fPtfl8E7qBDg6HrMH6UlWaA6YQUeIwlOh5UmQ==" /></div>
+    <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="C8rwxujyG7fJeAz5HVFREM5Tsjjjcxbwl4xUbTDOMLJI8Ihtn1thF6VI3FxkJNOl/RLGG9Zso5dG24xjOC1xgw==" /></div>
       <button class="sign-out-button tooltipped tooltipped-s" aria-label="Sign out">
         <span class="octicon octicon-sign-out"></span>
       </button>
@@ -229,7 +229,7 @@
 <ul class="pagehead-actions">
 
     <li class="subscription">
-      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="c8NIIXm+mpnmVp2bdiy656NB+/kkoCU5kGQoSvZ0GmklxUKb6ohDmJVmhwkAossG7/JyxezVyhjWwbHzz4noWw==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="20894596" />
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="G9Eofi85sEHvBh5+emqh42W5SZQApUM0ybwIm/hhoLocuVx76S9py+oPi2JqSk95O+k0GaZDL02ksXbJBLHNnQ==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="20894596" />
 
     <div class="select-menu js-menu-container js-select-menu">
       <a class="social-count js-social-count" href="/Statnet-Summer-Project/ndtv-shiny/watchers">
@@ -304,7 +304,7 @@
     
   <div class="js-toggler-container js-social-container starring-container ">
 
-    <form accept-charset="UTF-8" action="/Statnet-Summer-Project/ndtv-shiny/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Ea/Vnye23ltdGV51uEC5ohxEBNKug3qkFSmpy2POirBE2LsgzXKMX5nD3/mCb5lOCMinbjQa3kPHUsjxXgcUpA==" /></div>
+    <form accept-charset="UTF-8" action="/Statnet-Summer-Project/ndtv-shiny/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Yu79KfusaG3dwz9wsUA3ZELK1Hfpvs5amqScspJVj0074fwGzbJOwnDx0MDTxHH6hqrd51CZUtUirJlhNqB6TQ==" /></div>
       <button
         class="minibutton with-count js-toggler-target star-button"
         aria-label="Unstar this repository" title="Unstar Statnet-Summer-Project/ndtv-shiny">
@@ -315,7 +315,7 @@
           0
         </a>
 </form>
-    <form accept-charset="UTF-8" action="/Statnet-Summer-Project/ndtv-shiny/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="0pDSMA6yl56AeXy0ElKZJgBjHfsBZBp96eNkUhtHNb1Qsg13isfFMQ8ya1mzn4HMNHQa6fb3VuqwK9Sggr5LoQ==" /></div>
+    <form accept-charset="UTF-8" action="/Statnet-Summer-Project/ndtv-shiny/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="VvHBg+9sgzvkXzSYtN4GHXC5KWBwpTMR6BDZuqE58bzKT5SfbbAj5euJhIoR35yCxYszD80KIFmD71GSjrVZGg==" /></div>
       <button
         class="minibutton with-count js-toggler-target star-button"
         aria-label="Star this repository" title="Star Statnet-Summer-Project/ndtv-shiny">
@@ -490,9 +490,9 @@
         <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
           
 
-<a href="/Statnet-Summer-Project/ndtv-shiny/blob/4935c58615e83bb48e48648ede491ca8b0822048/README.md" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+<a href="/Statnet-Summer-Project/ndtv-shiny/blob/4935c58615e83bb48e48648ede491ca8b0822048/RdtoShinyInput.R" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
-<!-- blob contrib key: blob_contributors:v21:4e5effa2c4845f63a38796e063c6f39a -->
+<!-- blob contrib key: blob_contributors:v21:7d163cea2a20a5816954f8999c06202e -->
 
 <div class="file-navigation">
   
@@ -538,7 +538,7 @@
 
             <div class="select-menu-item js-navigation-item selected">
               <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/Statnet-Summer-Project/ndtv-shiny/blob/master/README.md"
+              <a href="/Statnet-Summer-Project/ndtv-shiny/blob/master/RdtoShinyInput.R"
                  data-name="master"
                  data-skip-pjax="true"
                  rel="nofollow"
@@ -547,7 +547,7 @@
             </div> <!-- /.select-menu-item -->
             <div class="select-menu-item js-navigation-item ">
               <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/Statnet-Summer-Project/ndtv-shiny/blob/tongfang/README.md"
+              <a href="/Statnet-Summer-Project/ndtv-shiny/blob/tongfang/RdtoShinyInput.R"
                  data-name="tongfang"
                  data-skip-pjax="true"
                  rel="nofollow"
@@ -556,7 +556,7 @@
             </div> <!-- /.select-menu-item -->
             <div class="select-menu-item js-navigation-item ">
               <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/Statnet-Summer-Project/ndtv-shiny/blob/yixi/README.md"
+              <a href="/Statnet-Summer-Project/ndtv-shiny/blob/yixi/RdtoShinyInput.R"
                  data-name="yixi"
                  data-skip-pjax="true"
                  rel="nofollow"
@@ -565,7 +565,7 @@
             </div> <!-- /.select-menu-item -->
         </div>
 
-          <form accept-charset="UTF-8" action="/Statnet-Summer-Project/ndtv-shiny/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zjIEYwQkLhnCEOnNtsqiFonNakIcih5OYZb7uaEqjWP8w/x3UhXu8kczzY6gxUXCQzPIL8/Lpw7CdEX1rw5TYw==" /></div>
+          <form accept-charset="UTF-8" action="/Statnet-Summer-Project/ndtv-shiny/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="nHLnK6NW4a0Yyxz/USkfu1coUcxuw49TMMK693Pq4xsLbWXM8cLqi5VRWMXFAPzvcXsB8Qv81zfLfkBZCRMSpg==" /></div>
             <span class="octicon octicon-git-branch select-menu-item-icon"></span>
             <div class="select-menu-item-text">
               <h4>Create branch: <span class="js-new-item-name"></span></h4>
@@ -573,7 +573,7 @@
             </div>
             <input type="hidden" name="name" id="name" class="js-new-item-value">
             <input type="hidden" name="branch" id="branch" value="master">
-            <input type="hidden" name="path" id="path" value="README.md">
+            <input type="hidden" name="path" id="path" value="RdtoShinyInput.R">
           </form> <!-- /.select-menu-item -->
 
       </div> <!-- /.select-menu-list -->
@@ -600,7 +600,7 @@
       <span class="octicon octicon-list-unordered"></span>
     </a>
     <button class="js-zeroclipboard minibutton zeroclipboard-button"
-          data-clipboard-text="README.md"
+          data-clipboard-text="RdtoShinyInput.R"
           aria-label="Copy to clipboard"
           data-copied-hint="Copied!">
       <span class="octicon octicon-clippy"></span>
@@ -608,12 +608,12 @@
   </div>
 
   <div class="breadcrumb">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Statnet-Summer-Project/ndtv-shiny" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">ndtv-shiny</span></a></span></span><span class="separator"> / </span><strong class="final-path">README.md</strong>
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Statnet-Summer-Project/ndtv-shiny" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">ndtv-shiny</span></a></span></span><span class="separator"> / </span><strong class="final-path">RdtoShinyInput.R</strong>
   </div>
 </div>
 
 
-  <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/Statnet-Summer-Project/ndtv-shiny/contributors/master/README.md">
+  <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/Statnet-Summer-Project/ndtv-shiny/contributors/master/RdtoShinyInput.R">
     Fetching contributors…
 
     <div class="participation">
@@ -626,49 +626,247 @@
   <div class="file">
     <div class="meta clearfix">
       <div class="info file-name">
-          <span>13 lines (7 sloc)</span>
+          <span>51 lines (44 sloc)</span>
           <span class="meta-divider"></span>
-        <span>0.278 kb</span>
+        <span>1.379 kb</span>
       </div>
       <div class="actions">
         <div class="button-group">
-          <a href="/Statnet-Summer-Project/ndtv-shiny/raw/master/README.md" class="minibutton " id="raw-url">Raw</a>
-            <a href="/Statnet-Summer-Project/ndtv-shiny/blame/master/README.md" class="minibutton js-update-url-with-hash">Blame</a>
-          <a href="/Statnet-Summer-Project/ndtv-shiny/commits/master/README.md" class="minibutton " rel="nofollow">History</a>
+          <a href="/Statnet-Summer-Project/ndtv-shiny/raw/master/RdtoShinyInput.R" class="minibutton " id="raw-url">Raw</a>
+            <a href="/Statnet-Summer-Project/ndtv-shiny/blame/master/RdtoShinyInput.R" class="minibutton js-update-url-with-hash">Blame</a>
+          <a href="/Statnet-Summer-Project/ndtv-shiny/commits/master/RdtoShinyInput.R" class="minibutton " rel="nofollow">History</a>
         </div><!-- /.button-group -->
 
           <a class="octicon-button tooltipped tooltipped-nw js-conduit-openfile-check"
              href="http://mac.github.com"
-             data-url="github-mac://openRepo/https://github.com/Statnet-Summer-Project/ndtv-shiny?branch=master&amp;filepath=README.md"
+             data-url="github-mac://openRepo/https://github.com/Statnet-Summer-Project/ndtv-shiny?branch=master&amp;filepath=RdtoShinyInput.R"
              aria-label="Open this file in GitHub for Mac"
              data-failed-title="Your version of GitHub for Mac is too old to open this file. Try checking for updates.">
               <span class="octicon octicon-device-desktop"></span>
           </a>
 
               <a class="octicon-button js-update-url-with-hash"
-                 href="/Statnet-Summer-Project/ndtv-shiny/edit/master/README.md"
+                 href="/Statnet-Summer-Project/ndtv-shiny/edit/master/RdtoShinyInput.R"
                  data-method="post" rel="nofollow" data-hotkey="e"><span class="octicon octicon-pencil"></span></a>
 
             <a class="octicon-button danger"
-               href="/Statnet-Summer-Project/ndtv-shiny/delete/master/README.md"
+               href="/Statnet-Summer-Project/ndtv-shiny/delete/master/RdtoShinyInput.R"
                data-method="post" data-test-id="delete-blob-file" rel="nofollow">
           <span class="octicon octicon-trashcan"></span>
         </a>
       </div><!-- /.actions -->
     </div>
-        <div id="readme" class="blob instapaper_body">
-    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
-<a name="user-content-ndtv-shiny" class="anchor" href="#ndtv-shiny" aria-hidden="true"><span class="octicon octicon-link"></span></a>ndtv-shiny</h1>
+      
+  <div class="blob-wrapper data type-r">
+      <table class="highlight tab-size-8 js-file-line-container">
+      <tr>
+        <td id="L1" class="blob-line-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-line-code js-file-line"><span class="c1"># TODO: Add comment</span></td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-line-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-line-code js-file-line"><span class="c1"># </span></td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-line-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-line-code js-file-line"><span class="c1"># Author: kirk</span></td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-line-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-line-code js-file-line"><span class="c1">###############################################################################</span></td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-line-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-line-code js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-line-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-line-code js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-line-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-line-code js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-line-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-line-code js-file-line"><span class="c1">#################################</span></td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-line-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-line-code js-file-line"><span class="c1">#library(tools)</span></td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-line-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-line-code js-file-line"><span class="c1">#Rd &lt;- parse_Rd(&quot;plot.network.Rd&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-line-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-line-code js-file-line"><span class="c1">#argument.index &lt;- which(sapply(Rd,function(x)attr(x,&quot;Rd_tag&quot;))==&quot;\\arguments&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-line-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-line-code js-file-line"><span class="c1">#Arg &lt;- Rd[[argument.index]]</span></td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-line-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-line-code js-file-line"><span class="c1">#l1 &lt;- unlist(lapply(Arg,function(x)try(x[[1]],silent = T)))</span></td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-line-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-line-code js-file-line"><span class="c1">#parse.fn1 &lt;- function(x)paste0(sapply(x[[2]],unlist),collapse=&quot;&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-line-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-line-code js-file-line"><span class="c1">#l2 &lt;- lapply(Arg, function(x)tryCatch(parse.fn1(x),error=function(e)return()))</span></td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-line-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-line-code js-file-line"><span class="c1">#l12 &lt;- paste(l1,l2,sep=&quot;:&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-line-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-line-code js-file-line"><span class="c1">#l12.final &lt;- l12[!grepl(&quot;:NULL&quot;,l12)]</span></td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-line-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-line-code js-file-line"><span class="c1">#l12.list &lt;- strsplit(l12.final,&quot;:&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-line-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-line-code js-file-line"><span class="c1">#save(l12.list, file=&quot;plotnetworkExp.RData&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-line-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-line-code js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-line-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-line-code js-file-line"><span class="c1">#################################</span></td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-line-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-line-code js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-line-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-line-code js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-line-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-line-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-line-code js-file-line"><span class="c1">##################################</span></td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-line-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-line-code js-file-line"><span class="c1">#library(tools)</span></td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-line-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-line-code js-file-line"><span class="c1">#Rd &lt;- parse_Rd(&quot;ergm-terms.Rd&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-line-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-line-code js-file-line"><span class="c1">#Rd2txt(Rd)</span></td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-line-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-line-code js-file-line"><span class="c1">#sapply(Rd,function(x)attr(x,&quot;Rd_tag&quot;))</span></td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-line-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-line-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-line-code js-file-line"><span class="c1">#grep(&quot;item&quot;,Rd)</span></td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-line-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-line-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-line-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-line-code js-file-line"><span class="c1">#argument.index &lt;- which(sapply(Rd,function(x)attr(x,&quot;Rd_tag&quot;))==&quot;\\section&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-line-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-line-code js-file-line"><span class="c1">#Arg &lt;- Rd[[491]]</span></td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-line-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-line-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-line-code js-file-line"><span class="c1">#Arg[]</span></td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-line-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-line-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-line-code js-file-line"><span class="c1">#l1 &lt;- unlist(lapply(Arg,function(x)try(x[[1]],silent = T)))</span></td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-line-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-line-code js-file-line"><span class="c1">#parse.fn1 &lt;- function(x)paste0(sapply(x[[2]],unlist),collapse=&quot;&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-line-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-line-code js-file-line"><span class="c1">#l2 &lt;- lapply(Arg, function(x)tryCatch(parse.fn1(x),error=function(e)return()))</span></td>
+      </tr>
+      <tr>
+        <td id="L42" class="blob-line-num js-line-number" data-line-number="42"></td>
+        <td id="LC42" class="blob-line-code js-file-line"><span class="c1">#l12 &lt;- paste(l1,l2,sep=&quot;:&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L43" class="blob-line-num js-line-number" data-line-number="43"></td>
+        <td id="LC43" class="blob-line-code js-file-line"><span class="c1">#l12.final &lt;- l12[!grepl(&quot;:NULL&quot;,l12)]</span></td>
+      </tr>
+      <tr>
+        <td id="L44" class="blob-line-num js-line-number" data-line-number="44"></td>
+        <td id="LC44" class="blob-line-code js-file-line"><span class="c1">#l12.list &lt;- strsplit(l12.final,&quot;:&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L45" class="blob-line-num js-line-number" data-line-number="45"></td>
+        <td id="LC45" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L46" class="blob-line-num js-line-number" data-line-number="46"></td>
+        <td id="LC46" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L47" class="blob-line-num js-line-number" data-line-number="47"></td>
+        <td id="LC47" class="blob-line-code js-file-line"><span class="c1">#save(l12.list, file=&quot;plotnetworkExp.RData&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L48" class="blob-line-num js-line-number" data-line-number="48"></td>
+        <td id="LC48" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+      <tr>
+        <td id="L49" class="blob-line-num js-line-number" data-line-number="49"></td>
+        <td id="LC49" class="blob-line-code js-file-line"><span class="c1">##################################</span></td>
+      </tr>
+      <tr>
+        <td id="L50" class="blob-line-num js-line-number" data-line-number="50"></td>
+        <td id="LC50" class="blob-line-code js-file-line"><span class="c1">#</span></td>
+      </tr>
+</table>
 
-<p>R-Shiny interface for ndtv package for animating dynamic network data <a href="http://cran.r-project.org/web/packages/ndtv/index.html">http://cran.r-project.org/web/packages/ndtv/index.html</a></p>
-
-<p>News: 06/16 (Kirk)</p>
-
-<p>Create the repository</p>
-
-<p>6/18 Michael checking that Rstudio-git integration works, hello world!</p>
-
-<p>6/25 Tongfang</p></article>
   </div>
 
   </div>
@@ -709,7 +907,7 @@
     </a>
 
     <ul class="site-footer-links">
-      <li>&copy; 2014 <span title="0.04873s from github-fe119-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2014 <span title="0.04674s from github-fe120-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="/site/terms">Terms</a></li>
         <li><a href="/site/privacy">Privacy</a></li>
         <li><a href="/security">Security</a></li>

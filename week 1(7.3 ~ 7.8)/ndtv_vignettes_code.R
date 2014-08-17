@@ -54,21 +54,20 @@ plot(flobusiness,displaylabels=TRUE)
 ###################################################
 theta.diss <- log(9)
 stergm.fit.1 <- stergm(flobusiness,
-                       formation= ~edges+gwesp(0,fixed=TRUE), 
-                       dissolution = ~offset(edges),
-                       targets="formation",
-                       offset.coef.diss = theta.diss,  
-                       estimate = "EGMME"	)
+  formation= ~edges+gwesp(0,fixed=TRUE), 
+  dissolution = ~offset(edges),
+	targets="formation",
+  offset.coef.diss = theta.diss,	
+  estimate = "EGMME"	)
 
-data(stergm.fit.1)
-#save(stergm.fit.1,file="stergm.fit.1.RData")
+
 ###################################################
 ### code chunk number 8: test_sim
 ###################################################
-stergm.sim.2 <- simulate.stergm(stergm.fit.1,
-                                nsim=1, time.slices = 20)
+stergm.sim.1 <- simulate.stergm(stergm.fit.1,
+                    nsim=1, time.slices = 100)
 
-#save(stergm.sim.2,file="stergm.sim.2.RData")
+
 ###################################################
 ### code chunk number 9: mdsj_actual_download
 ###################################################
@@ -81,11 +80,11 @@ ndtv:::install.mdsj(mdsj.dir)
 ###################################################
 ### code chunk number 10: calc_params
 ###################################################
-slice.par<-list(start=5,end=10,interval=1, 
+slice.par<-list(start=75,end=100,interval=1, 
                 aggregate.dur=1,rule="latest")
-save1 <- compute.animation(stergm.sim.2,slice.par=slice.par,
-                           animation.mode='MDSJ')
-save1
+compute.animation(stergm.sim.1,slice.par=slice.par,
+                                animation.mode='MDSJ')
+
 
 ###################################################
 ### code chunk number 11: render.par_animation
@@ -97,9 +96,10 @@ render.par=list(tween.frames=5,show.time=TRUE,
 ###################################################
 ### code chunk number 12: render_animation
 ###################################################
-render.animation(save1,render.par=render.par,
+render.animation(stergm.sim.1,render.par=render.par,
                  edge.col="darkgray",displaylabels=TRUE,
                  label.cex=.6,label.col="blue")
+
 
 ###################################################
 ### code chunk number 13: replay_animation (eval = FALSE)
@@ -109,23 +109,11 @@ render.animation(save1,render.par=render.par,
 
 ###################################################
 ### code chunk number 14: save_test
-####################################################
-saveVideo(render.animation(save1,render.par=render.par,
-                           edge.col="darkgray",displaylabels=TRUE,
-                           label.cex=.6,label.col="blue"),video.name="stergm.sim.1.mp4",clean=TRUE)
+###################################################
+saveVideo(ani.replay(),video.name="stergm.sim.1.mp4", 
+                    other.opts="-b 5000k",clean=TRUE)
 
-des = c("This is a silly example.\n\n", "You can describe it in more detail.", 
-        "For example, bla bla...")
 
-saveHTML({
-  par(mar = c(4, 4, 0.5, 0.5))
-  for (i in 1:20) {
-    plot(runif(20), ylim = c(0, 1))
-    ani.pause()
-  }
-}, img.name = "unif_plot", imgdir = "unif_dir", htmlfile = "random.html", 
-autobrowse = FALSE, title = "Demo of 20 uniform random numbers", 
-description = des)
 ###################################################
 ### code chunk number 15: filmstrip
 ###################################################
@@ -139,7 +127,7 @@ data(McFarland_cls33_10_16_96)
 slice.par<-list(start=0,end=30,interval=2.5, 
                 aggregate.dur=0,rule="latest")
 compute.animation(cls33_10_16_96,
-                  slice.par=slice.par,animation.mode='MDSJ')
+                slice.par=slice.par,animation.mode='MDSJ')
 render.animation(cls33_10_16_96,
                  displaylabels=FALSE,vertex.cex=1.5)
 ani.replay()
@@ -157,7 +145,7 @@ timeline(cls33_10_16_96,slice.par=slice.par)
 slice.par<-list(start=0,end=30,interval=2.5, 
                 aggregate.dur=2.5,rule="latest")
 compute.animation(cls33_10_16_96,
-                  slice.par=slice.par,animation.mode='MDSJ')
+                slice.par=slice.par,animation.mode='MDSJ')
 render.animation(cls33_10_16_96,
                  displaylabels=FALSE,vertex.cex=1.5)
 ani.replay()
@@ -170,7 +158,7 @@ slice.par<-list(start=0,end=30,interval=1,
                 aggregate.dur=5,rule="latest")
 timeline(cls33_10_16_96,slice.par=slice.par)
 compute.animation(cls33_10_16_96,
-                  slice.par=slice.par,animation.mode='MDSJ')
+                slice.par=slice.par,animation.mode='MDSJ')
 render.animation(cls33_10_16_96,
                  displaylabels=FALSE,vertex.cex=1.5)
 ani.replay()
@@ -186,21 +174,21 @@ layout.par=list(gv.engine='dot',gv.args='-Grankdir=LR')
 ### code chunk number 21: define_layout
 ###################################################
 network.layout.animate.circle <- function(net, dist.mat = NULL, 
-                                          default.dist = NULL, seed.coords = NULL, layout.par = list(),
-                                          verbose=FALSE){
+        default.dist = NULL, seed.coords = NULL, layout.par = list(),
+        verbose=FALSE){
   
-  n<-network.size(net)
-  x<-10*cos( seq(0,2*pi, length.out=n))
-  y<-10*sin( seq(0,2*pi, length.out=n))
-  return(cbind(x,y))
-}
+    n<-network.size(net)
+    x<-10*cos( seq(0,2*pi, length.out=n))
+    y<-10*sin( seq(0,2*pi, length.out=n))
+    return(cbind(x,y))
+  }
 
 
 ###################################################
 ### code chunk number 22: demo_layout
 ###################################################
 stergm.sim.1<-compute.animation(stergm.sim.1,
-                                slice.par=slice.par,animation.mode='circle')
+              slice.par=slice.par,animation.mode='circle')
 render.animation(stergm.sim.1)
 ani.replay()
 
@@ -275,8 +263,8 @@ ani.replay()
 ### code chunk number 29: wheel_color_function
 ###################################################
 render.animation(wheel,edge.lwd=3, 
-                 edge.col=function(slice){rgb((slice%e%'width')/10,0,0)},
-                 verbose=FALSE)
+    edge.col=function(slice){rgb((slice%e%'width')/10,0,0)},
+    verbose=FALSE)
 ani.replay()
 
 
@@ -287,8 +275,8 @@ require(sna)
 wheel%n%'slice.par'<-list(start=1,end=10,interval=1, 
                           aggregate.dur=1,rule='latest')
 render.animation(wheel,
-                 vertex.cex=function(slice){(betweenness(slice)+1)/5},
-                 verbose=FALSE)
+      vertex.cex=function(slice){(betweenness(slice)+1)/5},
+      verbose=FALSE)
 ani.replay()
 
 
@@ -296,9 +284,9 @@ ani.replay()
 ### code chunk number 31: wheel_zoom
 ###################################################
 render.animation(wheel,
-                 xlim=function(onset){c(-5/(onset*.5),5/(onset*.5))},
-                 ylim=function(onset){c(-5/(onset*.5),5/(onset*.5))},
-                 verbose=FALSE)
+      xlim=function(onset){c(-5/(onset*.5),5/(onset*.5))},
+      ylim=function(onset){c(-5/(onset*.5),5/(onset*.5))},
+      verbose=FALSE)
 ani.replay()
 
 
@@ -308,14 +296,14 @@ ani.replay()
 packageAsBibitem <- function(pkgname){
   cite <- citation(package=pkgname)
   #for(cite in cites){
-  if (length(cite$author)>1){
-    au <-paste(format(cite$author[1],include=c('family')),"et al. ")
-  } else {
-    au <-format(cite$author,include=c('family'))
-  }
-  cat(paste("\n\\bibitem[",au," (",cite$year,")]{",pkgname,"}\n",sep=''))
-  print(cite,style='latex')
-  cat("\n\n")
+    if (length(cite$author)>1){
+      au <-paste(format(cite$author[1],include=c('family')),"et al. ")
+    } else {
+      au <-format(cite$author,include=c('family'))
+    }
+    cat(paste("\n\\bibitem[",au," (",cite$year,")]{",pkgname,"}\n",sep=''))
+    print(cite,style='latex')
+    cat("\n\n")
   #}
 }
 
@@ -323,16 +311,18 @@ packageAsBibitem <- function(pkgname){
 ###################################################
 ### code chunk number 33: ndtv.Rnw:497-498
 ###################################################
-packageAsBibitem('networkDynamic')
+ packageAsBibitem('networkDynamic')
 
 
 ###################################################
 ### code chunk number 34: ndtv.Rnw:507-508
 ###################################################
-packageAsBibitem('ndtv')
+ packageAsBibitem('ndtv')
 
 
 ###################################################
 ### code chunk number 35: ndtv.Rnw:529-530
 ###################################################
-packageAsBibitem('tergm')
+ packageAsBibitem('tergm')
+
+

@@ -24,7 +24,7 @@ shinyServer(
       if(input$goButton==0)return()
       input$goButton
       isolate(eval(parse(text = input$dataset)))
-     })
+     }) 
    #number of nodes in nw
    nodes <- reactive({
       if(input$goButton==0)return()

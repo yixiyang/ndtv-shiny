@@ -43,8 +43,8 @@ shinyUI(fluidPage(
 																						'kapferer','kapferer2','samplike'),
 																				selectize = FALSE),
 																		br(),
-																		actionButton('goButton', 'Run')))
-												)),
+                                    actionButton('goButton','Run')))
+										  )),
 										tabPanel('Generic',
 												fluidRow(
 														column(12,

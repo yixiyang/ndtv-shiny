@@ -34,9 +34,17 @@ shinyServer(
      }
    })
    
+   
+   output$text <- renderPrint({
+     if(is.null(input$file1) & input$dataset)
+       cat("Please load data.\n")
+     else {
+       if(!is.null(input$file1)) cat("here is the data:\n")
+     }
+   })
+   
    output$summary <- renderDataTable({
-     if(!input$dataset) {
-       
+     if(!input$dataset) {   
      }
    }) 
    
@@ -62,93 +70,107 @@ shinyServer(
    
    upload.nw <- reactive({
      relations <- as.matrix(dataRe())
-     nodeInfo <- dataVertex()
-     rownames(relations) <- nodeInfo$name
-     colnames(relations) <- nodeInfo$name
-     nrelations <- network(relations,directed=FALSE)
-     #network.vertex.names(nrelations)
+     rownames(relations) <- dataVertex()$name
+     colnames(relations) <- dataVertex()$name
+     network(relations,directed=FALSE)
+     plot.network(nrelations)
+     ani.replay()
    })
    
    
-   #   upload.nw <- reactive({
-   #     dataVertex <- read.csv("vertexAttributes.csv",header=FALSE,stringsAsFactors=FALSE)
-   #     dataRe <- read.csv("relationalData.csv",header=FALSE,stringsAsFactors=FALSE)
-   #     relations <- as.matrix(dataRe)
-   #     nodeInfo <- dataVertex
-   #     rownames(relations) <- nodeInfo$name
-   #     colnames(relations) <- nodeInfo$name
-   #     nrelations <- network(relations,directed=FALSE)
-   #     
-   #   })
+      upload.nw <- reactive({
+        dataVertex <- read.csv("vertexAttributes.csv",header=FALSE,stringsAsFactors=FALSE)
+        dataRe <- read.csv("relationalData.csv",header=FALSE,stringsAsFactors=FALSE)
+        relations <- as.matrix(dataRe)
+        nodeInfo <- dataVertex
+        rownames(relations) <- nodeInfo$name
+        colnames(relations) <- nodeInfo$name
+        nrelations <- network(relations,directed=FALSE)     
+      })
    # Get the choosen network data from nw. 
    nw.reac <- reactive({
      inFile <- input$file1
      if(!is.null(inFile)) {
-       plot(upload.nw())
+       if(input$goButton==0)return()
+       input$goButton
        upload.nw()
      } else{
        if(input$goButton==0)return()  
        input$goButton
        isolate(eval(parse(text = input$dataset)))}
    })
-
+ 
+ 
    #number of nodes in nw
    nodes <- reactive({
-      if(input$goButton==0)return()
-      input$goButton
-      isolate(nw.reac()$gal$n)}) 
+     if(input$goButton==0)return()
+     input$goButton
+     isolate(nw.reac()$gal$n)}) 
    #get coordinates to plot network with
    coords <- reactive({
-      if(input$goButton==0)return()
-      input$goButton
-      isolate(plot.network(eval(parse(text = input$dataset))))})
+     if(input$goButton==0)return()
+     input$goButton
+     isolate(plot.network(eval(parse(text = input$dataset))))})
    
    #list of vertex attributes in nw
    attr <- reactive({
-      if(input$goButton==0)return()
-      input$goButton
-      attr <- c()
-      if(input$dataset != ''){      
+     if(input$goButton==0)return()
+     input$goButton
+     attr <- c()
+     if(input$dataset != ''){      
        isolate(  attr<-list.vertex.attributes(nw.reac()))
-      }
-      attr
-     }) 
+     }
+     attr
+   }) 
    
    #numeric attributes only (for size menu)
    numattr <- reactive({
-      if(input$goButton==0)return()
-      input$goButton   
-      numattr <- c()
-      if(input$dataset != ''){  
+     if(input$goButton==0)return()
+     input$goButton   
+     numattr <- c()
+     if(input$dataset != ''){  
        for(i in 1:length(attr())){
-        if(is.numeric(isolate(get.vertex.attribute(nw.reac(),attr()[i])))){
-         numattr <- append(numattr,attr()[i])
-        } 
+         if(is.numeric(isolate(get.vertex.attribute(nw.reac(),attr()[i])))){
+           numattr <- append(numattr,attr()[i])
+         } 
        }} 
-      numattr})
+     numattr})
    
-   
-#      output$dynamiccolor <- renderUI({
-#            selectInput('colorby',
-#                label = 'Color nodes according to:',
-#                c('None' = 2, attr()),
-#                selectize = FALSE)
-#          })
-#      
-#      output$dynamicsize <- renderUI({
-#            selectInput('sizeby',
-#                label = 'Size nodes according to:',
-#                c('None' = 1, numattr()),
-#                selectize = FALSE)
-#          })
-   
-#   pf <- reactive({parent.frame()}) 
-   
-#   
-#   
-#   textfnserver(sys.parents())
-#   
-   
+ 
+ #number of nodes in nw
+ nodes <- reactive({
+   if(input$goButton==0)return()
+   input$goButton
+   isolate(nw.reac()$gal$n)}) 
+ #get coordinates to plot network with
+ coords <- reactive({
+   if(input$goButton==0)return()
+   input$goButton
+   isolate(plot.network(eval(parse(text = input$dataset))))})
+ 
+ #list of vertex attributes in nw
+ attr <- reactive({
+   if(input$goButton==0)return()
+   input$goButton
+   attr <- c()
+   if(input$dataset != ''){      
+     isolate(  attr<-list.vertex.attributes(nw.reac()))
+   }
+   attr
+ }) 
+ 
+ #numeric attributes only (for size menu)
+ numattr <- reactive({
+   if(input$goButton==0)return()
+   input$goButton   
+   numattr <- c()
+   if(input$dataset != ''){  
+     for(i in 1:length(attr())){
+       if(is.numeric(isolate(get.vertex.attribute(nw.reac(),attr()[i])))){
+         numattr <- append(numattr,attr()[i])
+       } 
+     }} 
+   numattr})
    
    
    ########Jul 17, 2014########G-para TYPE1########

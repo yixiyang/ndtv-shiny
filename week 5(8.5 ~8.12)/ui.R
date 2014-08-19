@@ -45,54 +45,51 @@ helperButton <- function(id) {
 shinyUI(fluidPage(
     titlePanel("network app"),
     splitLayout( 
-      wellPanel(width=12, 
-        tabsetPanel(
-          
-          
-     #     bootstrapPage(title='statnet - ergm app',
-      #                  navbarPage(title=div(a(span('statnet  ', style='font-family:Courier'),
-       #                                        href = 'https://statnet.csde.washington.edu/trac',
-        #                                       target = '_blank'),HTML('&nbsp;&nbsp;'), 'ergm app'),
-                 
-          tabPanel('Data',
-            fluidRow(
-              column(12,
-                wellPanel(
-                  
-                  h3('Upload own files'),
-                  fileInput('file1', 'Choose relation file to upload',
-                            accept = c(
-                              'text/csv',
-                              'text/comma-separated-values',
-                              'text/tab-separated-values',
-                              'text/plain',
-                              '.csv',
-                              '.tsv'
-                            )
+      wellPanel(width=12,   
+          tabsetPanel(id='Data',
+          tabPanel('Data', value=1,
+              wellPanel(
+                  fluidRow(
+                      column(7,
+                          radioButtons('filetype',label=h5('File type'),
+                              choices=c('statnet network object'=1,
+                                  'matrix of relational data'=2))),
+                     
+                      column(7,
+                          br(),
+                          p('Upload a file of observed network data'),
+                          
+                              fileInput(inputId='rawdatafile', label=NULL),
+                                  verbatimTextOutput('rawdatafile'))
                   ),
-                  fileInput('file2', 'Choose Vertex file to upload',
-                            accept = c(
-                              'text/csv',
-                              'text/comma-separated-values',
-                              'text/tab-separated-values',
-                              'text/plain',
-                              '.csv',
-                              '.tsv'
-                            )
+                  fluidRow(
+                      conditionalPanel(condition='input.filetype == 2',
+                          column(7,
+                              br(),
+                              radioButtons('matrixtype', label='Choose Matrix Type',
+                                  choices=c('Adjacency matrix', 
+                                      'Bipartite adjacency matrix',
+                                      'Incidence matrix', 'Edge list'))),
+                      
+                          column(3,
+                              br(),
+                              span('Choose Network Attributes'),
+                              checkboxInput('dir', 'directed?', value=TRUE),
+                              checkboxInput('hyper', 'hyper?', value=FALSE),
+                              checkboxInput('loops', 'loops?', value=FALSE),
+                              checkboxInput('multiple', 'multiple?', value=FALSE),
+                              checkboxInput('bipartite', 'bipartite?', value=FALSE))
+                          ),
+                      conditionalPanel(condition='input.filetype == 1',
+                          column(3,
+                              br(),
+                              textInput('objname', label = 'Name of object'))
+                      )
                   ),
-                  tags$hr(),
-                  
-                  
-                  h3('Choose a dataset'),
-                  selectInput('dataset',
-                    label = 'Sample datasets',
-                    c(Choose = '', 'ecoli1', 'ecoli2', 'faux.mesa.high',
-                      'fauxhigh', 'flobusiness','flomarriage',
-                      'kapferer','kapferer2','samplike'),
-                    selectize = FALSE),
-                  br(),
-                  actionButton('goButton', 'Run')))
-            )),
+                  actionButton('goButton','Run')
+              )
+          ),
+                                         
           tabPanel('Generic',
             fluidRow(
               column(12,
@@ -109,6 +106,7 @@ shinyUI(fluidPage(
                   verbatimTextOutput("exp_generic"))# written in function.R
               )
             )),
+
           tabPanel('Layout',
             fluidRow(
               column(12,
@@ -124,7 +122,8 @@ shinyUI(fluidPage(
                 column(6,
                   verbatimTextOutput("exp_layout"))# written in function.R
               )
-            )),									
+            )),	
+
           tabPanel('Vertex',
             fluidRow(
               column(12,
@@ -141,6 +140,7 @@ shinyUI(fluidPage(
                   verbatimTextOutput("exp_vertex"))# written in function.R
               )
             )),
+
           tabPanel('Edge',
             fluidRow(
               column(12,
@@ -161,7 +161,43 @@ shinyUI(fluidPage(
 
           # tabPanel('Help',htmlOutput("help",inline=FALSE))
 
-tabPanel('Help',htmlOutput("help1",inline=FALSE),hr(),htmlOutput("help2",inline=FALSE))
+      tabPanel('Help',
+         h4('Resources'),
+         a("statnet Wiki",
+           href = "https://statnet.csde.washington.edu/trac", target = "_blank"),
+         br(),
+         a("network documentation on CRAN", 
+           href = "http://cran.r-project.org/web/packages/network/network.pdf",
+           target = "_blank"),
+         br(),
+         hr(),
+         p("The best way to contact us with questions, comments or suggestions",
+           "is through the", strong("statnet users group"), "listserv."),
+         p("To post and receive messages from this listserv, you need to join.",
+           "Instructions are at:", 
+           a("https://mailman.u.washington.edu/mailman/listinfo/statnet_help",
+             href = "https://mailman.u.washington.edu/mailman/listinfo/statnet_help",
+             target = "_blank")),
+         p("You can use the listserv to:"),
+         tags$ul(
+           tags$li("get help from the statnet development team (and other users)"),
+           tags$li("post questions, comments and ideas to other users"),
+           tags$li("be informed about statnet updates"),
+           tags$li("learn about bugs (and bug fixes)")
+         ),
+         p("Once you have joined the list, you can post your questions and comments to",
+           strong("statnet_help@u.washington.edu")),
+         p("A full list of all messages posted to this list is available at",
+           a("https://mailman.u.washington.edu/mailman/private/statnet_help",
+             href = "https://mailman.u.washington.edu/mailman/private/statnet_help",
+             target = "_blank")),
+         br(),
+         hr(),
+         p("This web app is built with", a("Shiny",href="http://shiny.rstudio.com/",
+                                           target = "_blank")),
+         p("Author of app: Kirk Li, Tongfang Sun, Yixi Yang, University of Washington")
+      )
+
 
 #          tabPanel('Graphical Parameter Type 1',
 #            fluidRow(
